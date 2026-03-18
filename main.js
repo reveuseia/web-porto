@@ -3,10 +3,10 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onClick = () => {
+menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('fa-x');
     navbar.classList.toggle('active');
-};
+});
 
 /*SCROLL SECTION ACTIVE LINK */
 
@@ -14,7 +14,7 @@ menuIcon.onClick = () => {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
@@ -38,7 +38,7 @@ window.onscroll = () => {
     /*REMOVE TOGGLE ICON AND NAVBAR */
     menuIcon.classList.remove('fa-x');
     navbar.classList.remove('active');
-};
+});
 
 /*SCROLL REVEAL */
 ScrollReveal({ 
@@ -58,4 +58,4 @@ const typed = new Typed('.multiple-text', {
     typeSpeed: 70,
     backSpeed: 70,
     backDelay: 1000
-});
+})
